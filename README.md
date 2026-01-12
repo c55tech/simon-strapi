@@ -4,7 +4,29 @@ Strapi plugin for integrating with the SIMON monitoring system.
 
 ## Installation
 
-### Via npm/yarn
+### Via npm/yarn (GitHub Repository)
+
+Add the package to your `package.json`:
+
+```json
+{
+  "dependencies": {
+    "strapi-plugin-simon": "github:c55tech/simon-strapi"
+  }
+}
+```
+
+Then install:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### Via npm/yarn (Published Package)
+
+If published to npm:
 
 ```bash
 npm install strapi-plugin-simon
