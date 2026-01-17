@@ -18,10 +18,14 @@ module.exports = ({ strapi }) => ({
     const payload = {
       client_id: parseInt(config.clientId),
       site_id: parseInt(config.siteId),
-      cms_type: 'strapi',
-      site_name: strapi.config.server.name || 'Strapi Site',
-      site_url: baseUrl,
-      data: siteData,
+      auth_key: config.authKey,
+      application_type: 'strapi',
+      site: {
+        name: strapi.config.server.name || 'Strapi Site',
+        url: baseUrl,
+        application_type: 'strapi',
+      },
+      ...siteData,
     };
 
     const success = await apiClient.submit('intake', payload);
